@@ -1,55 +1,31 @@
-# Market Observer (MO) – Project Manifest
+# MO Project Manifest
 
-Market Observer (MO) is a recommendation validation system designed to evaluate whether ETF recommendations have edge.
+## Project Name
+Market Observer
 
-MO is NOT a trading engine.
-MO is NOT a brokerage integration.
-MO is a research and validation system.
+## Project Type
+Expert System / Market Analysis System
 
-## Core Objective
+## Non-Goals
+- No broker connection
+- No automated trade execution
+- No real-capital management
+- No order routing
 
-MO evaluates ETF recommendations within a 20 trading day window.
+## Runtime Stack
+- LINE Bot
+- Cloudflare Workers
+- D1 Database
 
-Primary question:
+## Repository Role
+The GitHub repository is the canonical technical baseline for:
+- code
+- governance documents
+- architecture rules
+- contracts
+- current operational documentation
 
-Does the recommendation system produce positive expectancy?
-
-MO focuses on:
-- recommendation validation
-- simulation-based evaluation
-- performance diagnostics
-
-## System Deployment
-
-LINE Messaging API
-↓
-Cloudflare Workers
-↓
-MO Engine
-
-All runtime logic executes inside Workers.
-Local scripts are tooling only.
-
-## System Pipeline
-
-market data
-↓
-cycle
-↓
-recommendation
-↓
-simulation
-↓
-review
-↓
-review-save
-↓
-scoreboard
-
-## Final Definition
-
-Market Observer is a:
-Worker-native,
-AI-documented,
-simulation-based
-recommendation validation system.
+## Development Mode
+- Local repo = working copy
+- GitHub = source of truth
+- zip packages = temporary delivery mechanism

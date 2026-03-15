@@ -1,35 +1,17 @@
 # AI Memory – Market Observer
 
-This file records long‑term operational knowledge about the MO system.
+## Core Identity
+MO is an Expert System.
+It performs market analysis, research, simulation, and recommendation support.
 
-## Core Architecture
-
+## Fixed Deployment
 LINE Bot
 Cloudflare Workers
 D1 Database
 
-Workers execute all runtime logic.
-
-## System Identity
-
-MO is an Expert System.
-
-It performs:
-
-- Market analysis
-- Research
-- Simulation
-- Recommendation generation
-
-It does NOT perform:
-
-- Trade execution
-- Broker interaction
-- Capital management
-
-## Development Principles
-
-1. Cloudflare Workers remain the runtime environment
-2. CLI scripts are development tooling only
-3. GitHub is the system's canonical source of truth
-4. Release artifacts must not override GitHub history
+## Operational Rules
+- Workers run runtime logic
+- local scripts are tooling only
+- GitHub is canonical
+- release zip and handoff zip are temporary artifacts
+- update and deploy do not equal release

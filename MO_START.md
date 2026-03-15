@@ -1,70 +1,37 @@
 # Market Observer (MO)
 
-## System Overview
-Market Observer (MO) is an Expert System designed for **market observation, analysis, research, and simulation**.
+## Core Identity
+Market Observer (MO) is an **Expert System** for:
 
-MO **does NOT execute trades** and **does NOT connect to brokers**.  
-It is strictly an **analysis and decision‑support system**.
+- market analysis
+- research
+- simulation
+- recommendation support
 
-Primary deployment architecture:
+MO does **not** execute trades and does **not** connect to brokers.
 
+## Fixed Deployment Architecture
 LINE Bot → Cloudflare Workers → D1 Database
 
-All runtime logic must execute inside **Cloudflare Workers**.
+### Runtime Rules
+- LINE Bot = interaction layer
+- Cloudflare Workers = runtime layer
+- D1 Database = persistence layer
+- local CLI / scripts = tooling only
 
----
+Local tooling must never become the runtime system.
 
-## Architecture Lock
+## Canonical Source
+GitHub repository is the canonical source of truth.
 
-The following architecture elements are locked and must not be altered without explicit redesign:
+Temporary artifacts such as:
+- release zip
+- handoff zip
+- backup zip
 
-- LINE Bot = user interaction layer
-- Cloudflare Workers = runtime logic layer
-- D1 Database = data persistence
-- Local CLI scripts = tooling only (not runtime)
+are transfer media only, not canonical history.
 
-Local scripts must **never become server processes**.
-
----
-
-## System Philosophy
-
-MO is an **Expert System**, not an automated trading system.
-
-Purpose:
-
-- Observe markets
-- Analyze signals
-- Simulate portfolio outcomes
-- Provide research insight
-
-MO must never:
-
-- Execute trades
-- Connect to broker APIs
-- Manage real capital
-
----
-
-## Source of Truth
-
-The authoritative code base is:
-
-GitHub repository  
-https://github.com/peterlai66/market-observer
-
-Rules:
-
-- GitHub is the canonical source
-- Local environment is the working development environment
-- Release / handoff ZIP files are only temporary transfer artifacts
-
----
-
-## AI Handoff Reading Order
-
-When a new AI instance continues development it must read files in this order:
-
+## Required AI Reading Order
 1. MO_START.md
 2. MO_PROJECT_MANIFEST.md
 3. MO_SYSTEM_PHILOSOPHY.md
@@ -73,46 +40,19 @@ When a new AI instance continues development it must read files in this order:
 6. MO_KNOWLEDGE_SYSTEM.md
 7. docs/AI_MEMORY.md
 8. docs/NEXT_TASK.md
-9. docs/
+9. architecture/
+10. contracts/
+11. pipeline/
+12. runtime/
+13. ai/
+14. src/ and scripts/
 
-Only after understanding these documents should the AI read source code.
+## Release Rule
+update → validate → deploy → verify → AI release judgment → git commit → git push
 
----
+Important:
+- update != release
+- deploy != git sync
+- only after validation and explicit release approval should Git be updated
 
-## Development Workflow
-
-Standard workflow:
-
-AI development → Local update → Validation → Deploy → Verification → Release → Git commit
-
-Detailed steps:
-
-1. Receive release candidate from AI
-2. Run local update
-3. Run validation checks
-4. Deploy Worker
-5. Verify runtime behavior
-6. AI confirms release readiness
-7. Commit and push to GitHub
-
-Important rules:
-
-- update ≠ release
-- deploy ≠ Git synchronization
-
----
-
-## Git Workflow
-
-Typical commands:
-
-git status  
-git add .  
-git commit -m "message"  
-git push
-
-GitHub must always reflect the **latest stable baseline**.
-
----
-
-Generated: 2026-03-15T17:22:50.004899 UTC
+Generated: 2026-03-15T17:25:51.173169+00:00

@@ -1,60 +1,25 @@
-# Market Observer – System Contract
+# MO System Contract
 
-This document defines the data contracts between system modules.
+## Contract 1: Expert System Boundary
+MO performs analysis, research, explanation, simulation, and recommendation support only.
 
-## 1. Trade Date Contract
+## Contract 2: Runtime Boundary
+Cloudflare Workers is the runtime authority.
 
-referenceTradeDate is authoritative and is determined by:
+## Contract 3: Delivery Boundary
+LINE is the operator-facing interface.
 
-MAX(
-  mo_recommendation_log.trade_date,
-  mo_orders.signal_date
-)
+## Contract 4: Persistence Boundary
+D1 stores structured system state and analysis artifacts.
 
-Forbidden sources:
-- mo_cycle_state
-- twse_daily_summary
+## Contract 5: Git / Release Boundary
+A release is not considered baseline until:
+1. update completed
+2. validation passed
+3. deploy completed
+4. runtime verification passed
+5. release approved
+6. git commit pushed
 
-## 2. Date Consistency Contract
-
-The following fields must always represent the same trade cycle:
-- recommendation.trade_date
-- orders.signal_date
-- cycle.trade_date
-- summary.date
-
-## 3. Recommendation Contract
-
-A recommendation must contain:
-- symbol
-- signal_date
-- entry_low
-- entry_high
-- strategy_name
-- confidence_score
-
-Stored in:
-mo_orders
-
-Statuses:
-PENDING / FILLED / EXPIRED
-
-## 4. Simulation Contract
-
-Simulation uses OHLC daily data.
-
-Execution rule:
-if (low <= entry_high) AND (high >= entry_low)
-    FILLED
-else
-    PENDING / EXPIRED
-
-## 5. Operator Delivery Contract
-
-Operator reports are delivered through LINE.
-
-Operator layer must never:
-- trigger database writes
-- trigger strategy runs
-
-It is a read-only delivery layer.
+## Contract 6: Knowledge Continuity
+Core governance files must remain readable and current so new AI instances can continue reliably.

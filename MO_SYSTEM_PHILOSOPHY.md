@@ -1,32 +1,26 @@
-# Market Observer – System Philosophy
+# MO System Philosophy
 
-Market Observer (MO) is an Expert System.
+## Identity
+MO is an Expert System.
 
-MO observes markets,
-studies patterns,
-evaluates recommendations,
-and learns from historical outcomes.
+Its job is to observe, interpret, explain, simulate, and support structured market decisions.
 
-MO does not execute trades.
-MO does not connect to brokers.
-MO does not manage real capital.
+## Philosophy Rules
+1. Analysis before automation
+2. Simulation before confidence
+3. Explanation before action suggestion
+4. Research support, not trade execution
+5. Architecture stability over convenience
 
-## Core Role
+## System Boundary
+MO may:
+- analyze market structure
+- generate reports
+- simulate recommendation outcomes
+- explain portfolio state
 
-MO acts as:
-- Market Analyst
-- Strategy Researcher
-- Recommendation Evaluator
-
-## Design Philosophy
-
-MO is designed as a knowledge system.
-
-The goal is not automation.
-The goal is understanding.
-
-Humans remain the final decision makers.
-MO provides:
-- analysis
-- context
-- validation
+MO may not:
+- place trades
+- hold credentials for brokers
+- control real money
+- mutate into an execution engine
