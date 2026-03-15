@@ -1,0 +1,39 @@
+{
+  "applied_at": "2026-03-07T05:00:09.149Z",
+  "command": "update",
+  "inbox_entry": "market-observer_release_latest.zip",
+  "package_name": "market-observer_release_20260307_1300.zip",
+  "moved_to_bak": ".updates\\bak\\market-observer_release_20260307_1300.zip",
+  "repo_backup": ".updates\\repo-backup\\market-observer_repo_20260307_1300.zip",
+  "repo_backup_bytes": 3685392,
+  "extracted_to": ".updates\\work",
+  "extracted_files": 62,
+  "applied_entries": [
+    ".editorconfig",
+    ".env.example",
+    ".gitignore",
+    ".prettierrc",
+    ".zipignore",
+    "CHANGELOG.md",
+    "MO_START.md",
+    "README.md",
+    "RELEASE_NOTES.md",
+    "VERSION",
+    "developer",
+    "docs",
+    "manifest.json",
+    "migrations",
+    "package-lock.json",
+    "package.json",
+    "scripts",
+    "src",
+    "tsconfig.json",
+    "worker-configuration.d.ts",
+    "wrangler.jsonc"
+  ],
+  "archived_bytes": 3683615,
+  "cleanup_removed": [
+    ".updates\\backup"
+  ],
+  "status": "applied"
+}

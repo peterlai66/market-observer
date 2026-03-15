@@ -1,0 +1,9 @@
+node_modules/
+artifacts/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+.updates/work/*
+!.updates/work/.gitkeep

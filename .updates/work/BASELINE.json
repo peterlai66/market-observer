@@ -1,0 +1,28 @@
+{
+  "project": "market-observer",
+  "version": "0.19.30",
+  "baseline_locked": true,
+  "baseline_type": "release",
+  "release_artifact": "market-observer_release_latest.zip",
+  "lock_rule": {
+    "preferred_dev_baseline": "market-observer_dev_latest.zip",
+    "fallback_release_baseline": "market-observer_release_latest.zip",
+    "older_handoff_forbidden_as_dev_base": true,
+    "doctor_first_verification": true
+  },
+  "previous_locked_version": "0.19.29",
+  "generated_at": "2026-03-14T19:07:40.812Z",
+  "fingerprint_sha256": "5adec647808e036c81705b493465bce7c00fbaad296c83daff3a3dbbf07b66ee",
+  "fingerprint_files": [
+    "MO_START.md",
+    "package.json",
+    "VERSION",
+    "CHANGELOG.md",
+    "RELEASE_NOTES.md",
+    "scripts/mo.mjs",
+    "scripts/recommendation-scoreboard.mjs",
+    "docs/PROJECT.md",
+    "docs/AI_MEMORY.md",
+    "docs/NEXT_TASK.md"
+  ]
+}

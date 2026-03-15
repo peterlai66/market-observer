@@ -1,0 +1,8 @@
+{
+  "project": "market-observer",
+  "version": "0.17.7",
+  "package_type": "release",
+  "build_id": "20260311_v0177_twse_trade_date_and_pack_contract",
+  "created_at": "2026-03-11T02:20:00+08:00",
+  "notes": "Fix TWSE trade-date resolution by taking the latest FMTQIK/STOCK_DAY_ALL date and adding legacy MI_INDEX date probes; pack scripts now auto-include root repo files so new baseline/docs files are not missed."
+}

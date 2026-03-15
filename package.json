@@ -1,0 +1,46 @@
+{
+  "name": "market-observer",
+  "version": "0.19.30",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "deploy": "wrangler deploy",
+    "doctor": "node scripts/doctor.mjs",
+    "pack:dev": "node scripts/pack-dev.mjs",
+    "pack:release": "node scripts/pack-release.mjs",
+    "update": "node scripts/apply-update.mjs",
+    "sync:structure": "node scripts/sync-structure.mjs",
+    "handoff:spec": "node scripts/handoff.mjs",
+    "mo": "node scripts/mo.mjs",
+    "upgrade": "node scripts/apply-update.mjs",
+    "patch": "node scripts/apply-patch.mjs",
+    "pack:patch": "node scripts/pack-patch.mjs",
+    "release": "node scripts/pack-release.mjs",
+    "smoke:tools": "node scripts/smoke-tools.mjs",
+    "logs": "wrangler tail --format pretty",
+    "smoke:worker": "node scripts/smoke-worker.mjs",
+    "guard": "node scripts/guard.mjs",
+    "sanity": "node scripts/sanity.mjs",
+    "validate:artifacts": "node scripts/validate-artifacts.mjs",
+    "autopilot": "node scripts/autopilot.mjs",
+    "validate": "node scripts/validate.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "preflight:worker": "node scripts/preflight.mjs worker",
+    "runtime:invariants": "node scripts/runtime-invariants.mjs",
+    "portfolio:verify": "node scripts/portfolio-verify.mjs",
+    "recommendation:review": "node scripts/recommendation-review.mjs",
+    "recommendation:review:save": "node scripts/recommendation-review-save.mjs"
+  },
+  "bin": {
+    "mo": "./scripts/mo.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.5",
+    "@types/node": "^25.3.3",
+    "archiver": "^7.0.1",
+    "typescript": "^5.5.2",
+    "vitest": "~3.2.0",
+    "wrangler": "^4.69.0"
+  }
+}

@@ -1,0 +1,10 @@
+--- a/wrangler.jsonc
++++ b/wrangler.jsonc
+@@ -41,7 +41,7 @@
+ 	 */
+ 	"vars": {
+-		"AI_ENABLED": "0",
++		"AI_ENABLED": "1",
+ 		"OPENAI_MODEL": "gpt-4o-mini",
+ 	},
+ 	/**

@@ -1,0 +1,18 @@
+{
+  "applied_at": "2026-03-08T02:03:17.976Z",
+  "command": "patch",
+  "inbox_entry": "market-observer_patch_latest.zip",
+  "package_name": "market-observer_patch_20260308_1003.zip",
+  "moved_to_bak": ".updates\\bak\\market-observer_patch_20260308_1003.zip",
+  "repo_backup": ".updates\\repo-backup\\market-observer_toolchain_20260308_1003.zip",
+  "repo_backup_bytes": 3628917,
+  "extracted_to": ".updates\\work",
+  "extracted_files": 2,
+  "applied_entries": [
+    "PATCH_README.txt",
+    "wrangler_ai_enable.patch"
+  ],
+  "archived_bytes": 791,
+  "cleanup_removed": [],
+  "status": "applied"
+}
