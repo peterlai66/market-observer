@@ -1,8 +1,3 @@
-## 0.19.30
-- 修正 nextWeekday / addDays / isWeekend 的日期計算，避免週末與時區造成 `latestPendingExecDate` 錯誤。
-- `simulation/commit` 會保存 sandbox 的 cash/positions/orders after snapshot，讓 `exit/sandbox/preview` 可讀取。
-- `execution/audit` 以指定 signalDate 為優先，`simulation/reset` 後不再被舊 signal 誤導。
-
 ## 0.19.29
 - add(portfolio): introduce `src/portfolio/position_sizing.ts` so recommendation quantities are derived from deploy ratio / capped weights / lot constraints instead of ad-hoc inline math
 - improve(recommendation): BUY reasons and debug rows now include explicit sizing diagnostics (`deploy`, `target`, `weight`, `qty`, `notional`) for remote validation

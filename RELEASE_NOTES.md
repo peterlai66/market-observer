@@ -1,9 +1,3 @@
-## 0.19.30
-
-- 修正 pending 執行日顯示為下一交易日。
-- 修正 sandbox commit/reset/exit preview 的資料一致性。
-- 保留自動流程中的 `executePendingOrders()`，未新增第二套 execution flow。
-
 ## 0.19.29
 - 新增 `src/portfolio/position_sizing.ts`，把 recommendation 數量計算集中成單一 sizing engine。
 - BUY 建議與 strategy debug 現在會附帶 sizing diagnostics：deploy ratio / target budget / weight / qty / notional。
