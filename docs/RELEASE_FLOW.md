@@ -3,15 +3,15 @@
 MO 固定採用：
 
 AI 交付候選版
-→ 本機 update
-→ doctor / smoke-worker 驗證
+→ local update
+→ doctor / smoke-worker / 指定驗證
 → deploy
 → 功能驗證
-→ AI 判定可 release
+→ AI 明確判定可 release
 → git commit
 → git push
 
 ## 重點
 - update != release
-- deploy != GitHub 已同步
-- 只有 release 判定通過後才更新 Git baseline
+- deploy != git sync
+- release 後 GitHub 必須回到最新基準
