@@ -1,22 +1,20 @@
 # Developer Scripts Guide
 
-## Baseline Validation
-npm run typecheck
-npm run mo -- doctor
-npm run mo -- smoke-worker
+## Source of Truth
+在任何 CLI、cleanup、release、migration、handoff 操作前：
 
-## Release Validation
-Run all baseline validation commands before release judgment.
+先確認 GitHub repo 是否為當前正式基準。
 
-## Git Synchronization
-After release approval:
-git add .
-git commit -m "release: vX.X.X <summary>"
-git push
+Repository:
+https://github.com/peterlai66/market-observer
 
-## Future CLI Recommendation
-Recommended MO CLI helpers:
-- mo release-check
-- mo git-status
-- mo sync-check
-- mo git-commit
+## Version Authority
+版本號以根目錄 `VERSION` 為唯一來源。
+
+## Safe Workflow
+1. 確認 GitHub baseline
+2. local update / validate
+3. deploy
+4. verify
+5. release judgment
+6. git commit / push
