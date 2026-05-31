@@ -1,7 +1,27 @@
 {
   "name": "market-observer",
   "version": "0.19.30",
-  "private": true,
+  "description": "Taiwan post-market observation and recommendation-validation system for Cloudflare Workers, D1, TWSE open data, and LINE reports.",
+  "license": "MIT",
+  "author": "Peter Lai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterlai66/market-observer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peterlai66/market-observer/issues"
+  },
+  "homepage": "https://github.com/peterlai66/market-observer#readme",
+  "keywords": [
+    "taiwan-stock-market",
+    "twse",
+    "cloudflare-workers",
+    "cloudflare-d1",
+    "line-bot",
+    "market-data",
+    "post-market",
+    "recommendation-validation"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest",

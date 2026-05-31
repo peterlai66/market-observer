@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in Market Observer
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include commands, endpoint paths, or LINE commands when relevant.
+      placeholder: |
+        1. Run ...
+        2. Call ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Node version, Cloudflare/Wrangler version, branch, and relevant config.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation output
+      description: Paste relevant non-sensitive output from doctor, guard, sanity, typecheck, or tests.
